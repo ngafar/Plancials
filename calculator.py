@@ -22,15 +22,15 @@ def start():
 			os.system('cls') #Clears the screen (Windows).
 		except:
 			os.system('clear') #Linux /OS X
-		print "\n========================="
-		print "Price        |      $%s" %price
-		print "========================="
-		print "Shares       |       %s" %shares
-		print "========================="
-		print "Commission   |      $%s" %commission		
-		print "========================="		
-		print "Break-Even   |      $%s" %breakEven
-		print "=========================\n"		
+		print "\n============================="
+		print "Price        |      $ %s" %price
+		print "============================="
+		print "Shares       |        %s" %shares
+		print "============================="
+		print "Commission   |      $ %s" %commission		
+		print "============================="		
+		print "Break-Even   |      $",round(breakEven,4)
+		print "=============================\n"		
 		start()
 		
 	elif selection == "2":
@@ -44,45 +44,38 @@ def start():
 		commission = raw_input("> ")
 		
 		#Stock Price lookup
-		yahooFinance = urllib2.urlopen("http://finance.yahoo.com/q?s="+symbol).read()
-		price = yahooFinance.split('<span id="yfs_l84_'+symbol.lower()+'">' )[1].split("</span>")[0]
-		
-		breakEven = ((float(price) * float(shares)) + float (commission)) / (float(shares))
-		
 		try:
-			os.system('cls') #Clears the screen (Windows).
-		except:
-			os.system('clear') #Linux /OS X
-		print "\n========================="
-		print symbol.upper()
-		print "========================="		
-		print "Price        |      $%s" %price
-		print "========================="
-		print "Shares       |       %s" %shares
-		print "========================="
-		print "Commission   |      $%s" %commission		
-		print "========================="		
-		print "Break-Even   |      $%s" %breakEven
-		print "=========================\n"		
-		start()		
+			yahooFinance = urllib2.urlopen("http://finance.yahoo.com/q?s="+symbol).read()
+			price = yahooFinance.split('<span id="yfs_l84_'+symbol.lower()+'">' )[1].split("</span>")[0]
 		
-	elif selection == "help" or "HELP" or "Help":
-		try:
-			os.system('cls') #Clears the screen (Windows).
+			breakEven = ((float(price) * float(shares)) + float (commission)) / (float(shares))
+		
+			try:
+				os.system('cls') #Clears the screen (Windows).
+			except:
+				os.system('clear') #Linux /OS X
+			print "\n============================="
+			print symbol.upper()
+			print "============================="		
+			print "Price        |      $ %s" %price
+			print "============================="
+			print "Shares       |        %s" %shares
+			print "============================="
+			print "Commission   |      $ %s" %commission		
+			print "============================="		
+			print "Break-Even   |      $",round(breakEven,4)
+			print "=============================\n"		
+			start()	
 		except:
-			os.system('clear') #Linux /OS X
-		print "Confused? Curious? A bit of both? Well your in the right place."
-		print "\nHow to use"
-		print "========================="
-		print "Simply type in the number that corresponds with the option you would like to choose. This is either '1' or '2' (without quotation marks)."
-		print "\nWhat do the options mean?"
-		print "========================="
-		print ">Option 1 is to calculate the break-even price of a stock by typing in the price paid, shares purchased, and commission paid.\n"
-		print ">Option 2 will take a stock symbol and find its current price to calculate the break-even price."
-		print "\nWhy do I need this?"
-		print "========================="
-		print "Trading stocks is often associated with transaction costs in the from of commission. It is beneficial to know at what price when selling a stock, you will have covered any transaction costs and started to make profits."
-		print "\n=========================\n"
+			print "\n========================="
+			print "\nCould not find %s. Typo?\n" %symbol.upper()
+			print "=========================\n"		
+			start()			
+		
+	elif selection == "help":
+		import webbrowser
+		url = "https://github.com/ngafar/Plancials#help"
+		webbrowser.open(url)
 		start()	
 		
 	else:
