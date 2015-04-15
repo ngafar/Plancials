@@ -97,14 +97,13 @@ Development Name: Plancials
 Author: Nawaz Gafar
 Permission is hereby granted to any user, the ability to use, copy, 
 modify, and distribute, free of any charge, subject to the agreement 
-of the following 
-conditions: 
+of the following conditions: 
 
 - The notice above (starting with "Development Name") will appear in 
   any iterations of this file, or any further files that are a result 
   of modification of this file. 
 
-Please also not that this application is distributed without any 
+Please also note that this application is distributed without any 
 expressed or implied warrant. As such no liability shall be incurred 
 by the author for any subsequent event that should occur as a result 
 of information  acquired using this application.   

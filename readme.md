@@ -1,12 +1,13 @@
 # Plancials
 
-Trading stocks is often associated with transaction costs in the from of commission. It is beneficial to know at what price when selling a stock, you will have covered any transaction costs and started to make profits. 
+Trading stocks is often associated with transaction costs in the from of commission. It is beneficial to know at what price when selling a stock, you will have covered any transaction costs and thus, started to profit. 
+
+![Screenshot](https://github.com/ngafar/Plancials/blob/master/imgs/output.PNG)
 
 ## Download
 
 Download files coming soon.  
 
-<a id="help"></a> 
 ## Help
 
 How to use
