@@ -1,20 +1,20 @@
-import sys, os, urllib2
+import sys, os, urllib
 
 def start():
-	print "[1] Calculate the break even price for a stock you own"
-	print "[2] Calculate the break even price for a stock using it's ticker symbol\n"
-	print "Please select an option by typing the number"
-	selection = raw_input("> ")
+	print("[1] Calculate the break even price for a stock you own")
+	print("[2] Calculate the break even price for a stock using it's ticker symbol\n")
+	print("Please select an option by typing the number")
+	selection = input("> ")
 
 	if selection == "1":
-		print "Price Paid"
-		price = raw_input("> ")
+		print("Price Paid")
+		price = input("> ")
 
-		print "Shares Purchases"
-		shares = raw_input("> ")
+		print("Shares Purchases")
+		shares = input("> ")
 
-		print "Commission Paid"
-		commission = raw_input("> ")
+		print("Commission Paid")
+		commission = input("> ")
 
 		breakEven = ((float(price) * float(shares)) + float (commission)) / (float(shares))
 		
@@ -22,30 +22,30 @@ def start():
 			os.system('cls') #Clears the screen (Windows).
 		except:
 			os.system('clear') #Linux /OS X
-		print "\n============================="
-		print "Price        |      $ %s" %price
-		print "============================="
-		print "Shares       |        %s" %shares
-		print "============================="
-		print "Commission   |      $ %s" %commission		
-		print "============================="		
-		print "Break-Even   |      $",round(breakEven,4)
-		print "=============================\n"		
+		print("\n=============================")
+		print("Price        |      $ %s" %price)
+		print("=============================")
+		print("Shares       |        %s" %shares)
+		print("=============================")
+		print("Commission   |      $ %s" %commission)	
+		print("=============================")
+		print("Break-Even   |      $",round(breakEven,4))
+		print("=============================\n")		
 		start()
 		
 	elif selection == "2":
-		print "Stock Symbol (ex. AAPL or BAC)"
-		symbol = raw_input("> ")
+		print("Stock Symbol (ex. AAPL or BAC)")
+		symbol = input("> ")
 		
-		print "Shares Purchased"
-		shares = raw_input("> ")
+		print("Shares Purchased")
+		shares = input("> ")
 		
-		print "Commission Paid"
-		commission = raw_input("> ")
+		print("Commission Paid")
+		commission = input("> ")
 		
 		#Stock Price lookup
 		try:
-			yahooFinance = urllib2.urlopen("http://finance.yahoo.com/q?s="+symbol).read()
+			yahooFinance = urllib.urlopen("http://finance.yahoo.com/q?s="+symbol).read()
 			price = yahooFinance.split('<span id="yfs_l84_'+symbol.lower()+'">' )[1].split("</span>")[0]
 		
 			breakEven = ((float(price) * float(shares)) + float (commission)) / (float(shares))
@@ -54,22 +54,22 @@ def start():
 				os.system('cls') #Clears the screen (Windows).
 			except:
 				os.system('clear') #Linux /OS X
-			print "\n============================="
-			print symbol.upper()
-			print "============================="		
-			print "Price        |      $ %s" %price
-			print "============================="
-			print "Shares       |        %s" %shares
-			print "============================="
-			print "Commission   |      $ %s" %commission		
-			print "============================="		
-			print "Break-Even   |      $",round(breakEven,4)
-			print "=============================\n"		
+			print("\n=============================")
+			print(symbol.upper())
+			print("=============================")		
+			print("Price        |      $ %s" %price)
+			print("=============================")
+			print("Shares       |        %s" %shares)
+			print("=============================")
+			print("Commission   |      $ %s" %commission)		
+			print("=============================")		
+			print("Break-Even   |      $",round(breakEven,4))
+			print("=============================\n")		
 			start()	
 		except:
-			print "\n========================="
-			print "\nCould not find %s. Typo?\n" %symbol.upper()
-			print "=========================\n"		
+			print("\n=========================")
+			print("\nCould not find %s. Typo?\n" %symbol.upper())
+			print("=========================\n")	
 			start()			
 		
 	elif selection == "help":
@@ -83,9 +83,9 @@ def start():
 			os.system('cls') #Clears the screen (Windows).
 		except:
 			os.system('clear') #Linux /OS X
-		print "\n========================="
-		print "\nNot a valid value\n"
-		print "=========================\n"		
+		print("\n=========================")
+		print("\nNot a valid value\n")
+		print("=========================\n")		
 		start()
 		
 start()
