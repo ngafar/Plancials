@@ -6,7 +6,7 @@ Trading stocks is often associated with transaction costs in the from of commiss
 
 ## Download
 
-Download files coming soon.  
+[Plancials 1.0 (Windows)](https://github.com/ngafar/Plancials/blob/master/Plancials.zip?raw=true)
 
 ## Help
 
