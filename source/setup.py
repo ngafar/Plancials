@@ -6,7 +6,7 @@ target = Executable(
 	icon="icon.ico")
 
 setup(name='Plancials',
-	version='1.0',
+	version='1.1',
 	description='A simple break-even calulcator',
 	options={'build_exe': {'packages':packages}},
 	executables=[target])

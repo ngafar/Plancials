@@ -6,7 +6,7 @@ Trading stocks is often associated with transaction costs in the from of commiss
 
 ## Download
 
-[Plancials 1.0 (Windows)](https://github.com/ngafar/Plancials/blob/master/Plancials.zip?raw=true)
+[Plancials 1.1 (Windows)](https://github.com/ngafar/Plancials/blob/master/Plancials.zip?raw=true)
 
 ## Help
 
@@ -14,7 +14,7 @@ How to use
 * Start by entering the symbol of the company you wish to purchase 
 * Enter the amount of shares you intend to buy
 * Enter the commission/fee charged by your broker
-* After (hitting enter) a chart should appear, to perform another calculation simply close the graph
+* After (hitting enter) a graph should appear, to perform another calculation simply close the graph
 
 Interpreting results
 * After entering all the required information a chart should appear. Using the matching color, you can see the closing, high, and low price of the stock for the past year
