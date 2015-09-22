@@ -23,6 +23,9 @@ Interpreting results
 * The dashed line represents the break-even point given the parameters  entered
 * Additionally, the window used to enter the required info should now have cleared and begin to display a table containing the previously entered data as well as a break-even price. 
 
+Formula Used
+* Break-Even Price = ((number of shares * price ) + commission) / number of shares
+
 ## Developers
 
 This project was built using Python3, Numpy and Matplotlib. Any additional dependencies can be found in the requirements.txt file
