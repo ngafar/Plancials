@@ -102,8 +102,6 @@ def start():
 		print ("Could not find: ", stock)
 		start()
 
-
-
 start()
 
 """
@@ -115,14 +113,19 @@ Permission is hereby granted to any user, the ability to use, copy,
 modify, and distribute, free of any charge, subject to the agreement 
 of the following conditions: 
 
+- This project is licensed under the Creative Commons 
+  Attribution-ShareAlike 4.0 International License. Further information 
+  regarding this license and usage may be found by visiting:
+  http://creativecommons.org/licenses/by-sa/4.0/
+
 - The notice above (starting with "Development Name") will appear in 
   any iterations of this file, or any further files that are a result 
-  of modification of this file. 
+  of the modification of this file. 
 
 Please also note that this application is distributed without any 
 expressed or implied warrant. As such no liability shall be incurred 
-by the author for any subsequent event that should occur as a result 
-of information  acquired using this application.   
+by the author for any subsequent event(s) that should occur as a result 
+of information acquired through usage of this application.   
 
 ----------------------------- Tamam Shud -----------------------------
 """
