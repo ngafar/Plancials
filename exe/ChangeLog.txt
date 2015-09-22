@@ -1,2 +1,2 @@
-1.0 - 6/21/2015 - Inital Release 
 1.1 - 9/22/2015 - Better error recognition loop (for typos)
+1.0 - 6/21/2015 - Inital Release 
