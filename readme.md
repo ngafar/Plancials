@@ -2,7 +2,7 @@
 
 Trading stocks is often associated with transaction costs in the from of commission. Plancials is a light weight application that allows investors to see at what price given the amount of shares bought and commission paid, their investments will start to yield profits.  
 
-![Screenshot](https://github.com/ngafar/Plancials/blob/master/imgs/output.PNG)
+![Screenshot](https://github.com/ngafar/Plancials/blob/master/imgs/output.jpg)
 
 ## Download
 
@@ -14,6 +14,7 @@ How to use
 * Start by entering the symbol of the company you wish to purchase 
 * Enter the amount of shares you intend to buy
 * Enter the commission/fee charged by your broker
+* After (hitting enter) a chart should appear, to perform another calculation simply close the graph
 
 Interpreting results
 * After entering all the required information a chart should appear. Using the matching color, you can see the closing, high, and low price of the stock for the past year
